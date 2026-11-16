@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Twilio",
+  "version": "1.1.0",
+  "description": "Neste computador o Discord abre pela variante Twilio.",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "declarativeNetRequest",
+    "alarms"
+  ],
+  "host_permissions": [
+    "*://discord.com/*",
+    "*://*.discord.com/*",
+    "*://discordapp.com/*",
+    "*://*.discordapp.com/*",
+    "*://discord.gg/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "discord",
+        "enabled": true,
+        "path": "regras.json"
+      }
+    ]
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "aviso.html",
+        "icon128.png"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "fundo.js"
+  }
+}

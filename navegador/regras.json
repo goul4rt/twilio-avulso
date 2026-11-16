@@ -1,0 +1,8 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {"type": "redirect", "redirect": {"extensionPath": "/aviso.html"}},
+    "condition": {"requestDomains": ["discord.com", "discordapp.com", "discord.gg"], "resourceTypes": ["main_frame", "sub_frame"]}
+  }
+]
